@@ -1,13 +1,11 @@
 import random
-import matplotlib.pyplot as plt
 
 def versuch(wechsel):
     # Tür 1 ist das Auto, Türen 2 und 3 sind Ziegen
     gewaehlte_tuer = random.randint(1, 3) # zufällige Tür mit der Nummer 1-3
     if wechsel: # Wenn man wechselt, dann:
         geoeffnete_tuer = 3 if gewaehlte_tuer==2 else 2
-        verfuegbare_tueren = [i for i in range(1,4) if i not in (gewaehlte_tuer, geoeffnete_tuer)]
-        gewaehlte_tuer = random.choice(verfuegbare_tueren)
+        gewaehlte_tuer = 6- (gewaehlte_tuer + geoeffnete_tuer)
     if gewaehlte_tuer == 1:
         return "Auto"
     else:
@@ -19,6 +17,10 @@ def main():
     o = [versuch(False) for i in range(100000)]
     print(f'Autoquote mit Wechsel:  {m.count("Auto")/1000}% \nAutoquote ohne Wechsel: {o.count("Auto")/1000}%')
     plot_res(m,o)
+
+
+
+import matplotlib.pyplot as plt
 
 
 def plot_res(p1, p2):

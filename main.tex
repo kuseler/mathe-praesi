@@ -31,7 +31,7 @@
 
 	\frame{
 		\frametitle{Simulation}
-		Die Lösung: eine Simulation
+		Nutzen wir also eine Simulation, um es herauszufinden!
 	}
 
 		\frame{
@@ -42,7 +42,7 @@
 	\frame{
 		\frametitle{Ausgedrückt in Ergebnismengen:}
 		\begin{align*}
-		\text{Ergebniraum:}\\
+		\text{Ergebnisraum:}\\
 		\Omega &= \{Ziege1, Ziege2, Auto\}; \; |\Omega|= 3\\
 		\text{Ergebnismenge mit Wechsel:}\\
 		\Omega_{Wechsel} &= \{Ziege1, Ziege2\};\; |\Omega_{Wechsel}|=2\\
@@ -53,15 +53,30 @@
 		P_{ohne Wechsel} &= \frac{|\Omega_{ohne Wechsel}|}{|\Omega|}= \frac{1}{3}
 		\end{align*}
 	}
+
+
+	\frame{
+	\frametitle{Ausgedrückt als abhängige Wahrscheinlichkeit:}
+	$w_a$, $w_z$: Es wurde anfangs das Auto, bzw. eine Ziege gewählt.\\
+	$W_a$, $W_z$: Es wurde nach der Umwahl das Auto, bzw. die Ziege gewählt.\\
+	Nach dem Satz der totalen Wahrscheinlichkeit:
+	\begin{align*}
+	P(a) &= P(W_a \land w_z) + P(W_a \land w_a) \\&= P(w_z) * P(w_z|W_a) + P(w_a) * P(W_a|w_a)\\
+	&= \frac{2}{3} * 1 + \frac{1}{3} * 0 = \frac{2}{3}
+	\end{align*}
+	}
 	\frame{
 		\frametitle{Fortführung}
 		Würdet ihr wechseln, wenn es $n$ Türen gäbe und $(n-2)$ davon geöffnet werden?
 		}
 	\frame{
+		\frametitle{Erklärung der Simulation}
+		Nun wird die Simulation erklärt
+	}
 		\frametitle{Quellen}
 		\url{https://de.wikipedia.org/wiki/Hausziege#/media/Datei:Hausziege_04.jpg}\\
 		\url{https://thumbs.dreamstime.com/b/drei-t\%C3\%BCren-1875644.jpg}\\
 		\url{https://www.grin.com/document/214288}\\
-		\url{https://www.pedocs.de/volltexte/2013/5807/pdf/UntWiss_2004_1_Krauss_Atmaca_Schueler_Einsicht.pdf}}
+		\url{https://www.pedocs.de/volltexte/2013/5807/pdf/UntWiss_2004_1_Krauss_Atmaca_Schueler_Einsicht.pdf}
 
 \end{document}
