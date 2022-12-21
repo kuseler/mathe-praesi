@@ -4,7 +4,6 @@
 \usepackage{tikz}
 \usetikzlibrary{trees}
 \title{Das Ziegenproblem}
-\subtitle{Unintuitive Wahrscheinlichkeit}
 \usepackage{tikz}
 \usetikzlibrary{trees}
 
@@ -18,13 +17,23 @@
 		\includegraphics{dreitueren}
 	}
 	\frame{
-		\frametitle{Die Optimale Strategie}
-		\framesubtitle{Gibt es überhaupt eine optimale Strategie, was meint ihr?}
+		In wie vielen der 3 möglichen Konstellationen würde der Kandidat bei dieser Spielshow das Auto gewinnen, wenn...?
+		\begin{itemize}
+			\item der Spieler bei seiner Wahl bleibt?
+			\item der Spieler zur letzten verbleibenden Tür wechselt?
+		\end{itemize}
+}
+
+		\frame{
+		\frametitle{Optimale Strategie?}
+		Gibt es eine optimale Strategie, was meint ihr?
 	}
+
 	\frame{
 		\frametitle{Simulation}
 		Die Lösung: eine Simulation
 	}
+
 		\frame{
 		\frametitle{Warum?}
 		\small
@@ -33,24 +42,26 @@
 	\frame{
 		\frametitle{Ausgedrückt in Ergebnismengen:}
 		\begin{align*}
-		\text{Allgemeine Ergebnismenge:}\\
-		E &= \{Ziege1, Ziege2, Auto\}; \; |E|= 3\\
+		\text{Ergebniraum:}\\
+		\Omega &= \{Ziege1, Ziege2, Auto\}; \; |\Omega|= 3\\
 		\text{Ergebnismenge mit Wechsel:}\\
-		E_{Wechsel} &= \{Ziege1, Ziege2\};\; |E_{Wechsel}|=2\\
+		\Omega_{Wechsel} &= \{Ziege1, Ziege2\};\; |\Omega_{Wechsel}|=2\\
 		\text{Ergebnismenge ohne Wechsel:}\\
-		E_{ohne Wechsel} &= \{ Auto \};\;|E_{ohne Wechsel}|= 1\\
+		\Omega_{ohne Wechsel} &= \{ Auto \};\;|\Omega_{ohne Wechsel}|= 1\\
 		\text{Daraus folgt: }\\
-		P_{Wechsel} &= \frac{ |E_{Wechsel}|}{|E|}= \frac{2}{3}\\
-		P_{ohne Wechsel} &= \frac{|E_{ohne Wechsel}|}{|E|}= \frac{1}{3}
+		P_{Wechsel} &= \frac{ |\Omega_{Wechsel}|}{|\Omega|}= \frac{2}{3}\\
+		P_{ohne Wechsel} &= \frac{|\Omega_{ohne Wechsel}|}{|\Omega|}= \frac{1}{3}
 		\end{align*}
 	}
 	\frame{
-		\frametitle{Verdeutlichung}
-		Würdet ihr wechseln, wenn es 1000 Türen gäbe und 998 davon geöffnet werden?
+		\frametitle{Fortführung}
+		Würdet ihr wechseln, wenn es n Türen gäbe und (n-2) davon geöffnet werden?
 		}
+	\frame{
 		\frametitle{Quellen}
 		\url{https://de.wikipedia.org/wiki/Hausziege#/media/Datei:Hausziege_04.jpg}\\
 		\url{https://thumbs.dreamstime.com/b/drei-t\%C3\%BCren-1875644.jpg}\\
-		\url{https://www.grin.com/document/214288}
+		\url{https://www.grin.com/document/214288}\\
+		\url{https://www.pedocs.de/volltexte/2013/5807/pdf/UntWiss_2004_1_Krauss_Atmaca_Schueler_Einsicht.pdf}}
 
 \end{document}
