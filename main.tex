@@ -1,7 +1,12 @@
 \documentclass{beamer}
 \usepackage{graphicx}
-\title{Das Ziegenspiel}
-\subtitle{Unintuitive Wahrscheinlichkeiten}
+
+\usepackage{tikz}
+\usetikzlibrary{trees}
+\title{Das Ziegenproblem}
+\subtitle{Unintuitive Wahrscheinlichkeit}
+\usepackage{tikz}
+\usetikzlibrary{trees}
 
 %\usetheme{lucid}
 \begin{document}
@@ -9,8 +14,7 @@
 		\titlepage
 	}
 	\frame {
-		\frametitle{Was ist das Ziegenspiel?}
-		Bei dem Ziegenspiel gibt es drei Türen, hinter einer dieser Türen gibt es einen Preis, hinter den anderen beiden stehen Ziegen. Nachdem man eine Tür wählt, offenbart der Moderator, dass sich hinter einer der beiden ungeöffneten Türen eine Ziege verbirgt. Anschließend wird man gefragt, ob man wechseln möchte.
+		\frametitle{Was ist das Ziegenproblem?}
 		\includegraphics{dreitueren}
 	}
 	\frame{
@@ -21,6 +25,11 @@
 		\frametitle{Simulation}
 		Die Lösung: eine Simulation
 	}
+		\frame{
+		\frametitle{Warum?}
+		\small
+		\input{entscheidungsbaum.tex}}
+
 	\frame{
 		\frametitle{Ausgedrückt in Ergebnismengen:}
 		\begin{align*}
@@ -36,10 +45,6 @@
 		\end{align*}
 	}
 	\frame{
-		\frametitle{Warum?}
-		\includegraphics[scale=0.5]{erklaerung}
-		}
-	\frame{
 		\frametitle{Verdeutlichung}
 		Würdet ihr wechseln, wenn es 1000 Türen gäbe und 998 davon geöffnet werden?
 		}
@@ -47,4 +52,5 @@
 		\url{https://de.wikipedia.org/wiki/Hausziege#/media/Datei:Hausziege_04.jpg}\\
 		\url{https://thumbs.dreamstime.com/b/drei-t\%C3\%BCren-1875644.jpg}\\
 		\url{https://www.grin.com/document/214288}
+
 \end{document}

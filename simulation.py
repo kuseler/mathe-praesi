@@ -1,13 +1,14 @@
 import random
 import matplotlib.pyplot as plt
 
-def run_trial(switch_doors):
-    chosen_door = random.randint(1, 3)
-    if switch_doors:
-        revealed_door = 3 if chosen_door==2 else 2
-        available_doors = [i for i in range(1,4) if i not in (chosen_door, revealed_door)]
-        chosen_door = random.choice(available_doors)
-    if chosen_door == 1:
+def versuch(wechsel):
+    # Tür 1 ist das Auto, Türen 2 und 3 sind Ziegen
+    gewaehlte_tuer = random.randint(1, 3) # zufällige Tür mit der Nummer 1-3
+    if wechsel: # Wenn es wechselt, 
+        revealed_door = 3 if gewaehlte_tuer==2 else 2
+        available_doors = [i for i in range(1,4) if i not in (gewaehlte_tuer, revealed_door)]
+        gewaehlte_tuer = random.choice(available_doors)
+    if gewaehlte_tuer == 1:
         return "Auto"
     else:
         return "Ziege"
